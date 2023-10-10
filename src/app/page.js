@@ -1,9 +1,13 @@
-import Image from 'next/image'
+'use client';
+
+import { ThemeProvider } from 'next-themes';
+import { Sidebar } from '@/components/Global/sidebar';
 
 export default function Home() {
   return (
-    <div>
-      TEST
-    </div>
+    <ThemeProvider>
+      <Sidebar />
+      <div className='text-highlight'>TEST</div>
+    </ThemeProvider>
   )
 }
